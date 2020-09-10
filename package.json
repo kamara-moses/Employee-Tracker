@@ -1,0 +1,26 @@
+{
+  "name": "employee-tracker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kamara-moses/Employee-Tracker.git"
+  },
+  "author": "Moses Kamara",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kamara-moses/Employee-Tracker/issues"
+  },
+  "homepage": "https://github.com/kamara-moses/Employee-Tracker#readme",
+  "dependencies": {
+    "console.table": "^0.10.0",
+    "inquirer": "^7.3.3",
+    "mysql": "^2.18.1",
+    "promise-mysql": "^4.1.3"
+  }
+}
