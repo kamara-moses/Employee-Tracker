@@ -26,7 +26,7 @@ connection.connect((err) => {
     start();
 });
 
-start => () => {
+function start() {
     inquirer
     .prompt({
         name: 'action',
@@ -46,7 +46,8 @@ start => () => {
             'Delete Department',
             'Delete Role',
             'Delete Employee',
-            'View Department Budgets'
+            'View Department Budgets',
+            'Exit'
         ]
     })
     .then((answer) => {
@@ -107,6 +108,28 @@ start => () => {
             case 'View Department Budgets':
                 viewDeptBudgets();
                 break;
+
+            case 'Exit':
+                exit();
+                break;
         }
+    });
+}
+
+//View ALl Employees
+function viewAllEmp() {
+    //query to view all employees
+    const query = 'SELECT e.id, e.first_name, e.last_name, role.title, department.name AS department, role.salary, concat(m.first_name , " " , m.last_name) AS manager FROM employee e LEFT JOIN employee m ON e.manager_id = m.id INNER JOIN role ON e.role_id = role.id INNER JOIN department ON role.department_id = department.id ORDER BY ID ASC';
+
+     // Query from connection
+     connection.query(query, function(err, res) {
+        if(err) return err;
+        console.log("\n");
+
+        // Display query results using console.table
+        console.table(res);
+
+        //Back to main menu
+        start();
     });
 }
