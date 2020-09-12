@@ -19,6 +19,7 @@
   "dependencies": {
     "console.table": "^0.10.0",
     "inquirer": "^7.3.3",
-    "mysql": "^2.18.1"
+    "mysql": "^2.18.1",
+    "promise-mysql": "^4.1.3"
   }
 }
