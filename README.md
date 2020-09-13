@@ -23,6 +23,7 @@ The application gives you the following options:
 * [Technologies](#technologies)
 * [Contributing](#contributing)
 * [Test](#test)
+* [Challenges](#challenges)
 * [Questions](#questions)
 * [License](#license)
 * [Author](#Author)
@@ -79,15 +80,31 @@ There are no automated test designed for this application. If you would like to 
     4. 'View all employees by manager'
     5. 'View all departments'
     6. 'View all roles'
-    7. "Add department" followed by "View all departments" to confirm that the new departments are added.
-    8. "Add role" followed by "View all roles" to confirm.
-    9. "Add employee" followed by "View all employees" to confirm that the new employees are added. 
-    10. "Update employee role" followed by "View all employees" to confirm.
+    7. 'Add department' followed by 'View all departments' to confirm that the new departments are added.
+    8. 'Add role' followed by 'View all roles' to confirm.
+    9. 'Add employee' followed by 'View all employees' to confirm that the new employees are added. 
+    10. 'Update employee role' followed by 'View all employees' to confirm.
     11. 'Delete department' followed by 'View all departments' to confirm that the department selected has been deleted.
     12. 'Delete role' followed by 'View all roles' to confirm the role selected has been deleted.
     13. 'Delete employee' followed by 'View all employees' to confirm the employee selected has been deleted
     14. 'View Department Budgets'
     15. 'Exit' exits the application
+
+## Challenges
+    1. I had an issue with authentication problem trying to connect to MySQL. I researched on the web trying to solve this issue for awhile and tried many methods to no avail. I spoke to one of my T.A's Lawrence who helped me with the authentication proble. He told me to run the following queries in MySQL: ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password'.
+    I used the password I used to get into MySQL and was able to be authenticated and created the connection between my Visual Studio Code to MySQL using node.
+
+    2. I used promise-mysql package to help with promising. Am not too familiar with using queries with mysql, so using the promise-mysql really made this easier for me.
+
+    3. Passing two argument using  promise took me a while to figure out but decided to do this route, this was much easier and I think was simpler for me. I will continue to do much research and study on passing two arguments in promises:
+
+```javascript
+return Promise.all([
+        conn.query('SELECT id, title FROM role ORDER BY title ASC'), 
+        conn.query("SELECT employee.id, concat(employee.first_name, ' ' ,  employee.last_name) AS Employee FROM employee ORDER BY Employee ASC")
+    ]);
+}).then(([roles, managers]) => {
+```
 
 ## Questions
 If you have questions about this repository? Please contact me at [kamara.moses@yahoo.com](mailto:kamara.moses@yahoo.com). View more of my work in GitHub at [kamara-moses](https://github.com/kamara-moses).
