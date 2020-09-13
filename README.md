@@ -3,7 +3,7 @@
 ## Badges
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-![Employee Tracker Demo](images/Employee-Tracker.gif)
+![Employee Tracker Demo](images/employee-tracker.gif)
 
 ## Description:
 This Node application is for a business owner to be able to view and manage departments, roles, and employees in their company in order to organize and plan their business.
