@@ -33,7 +33,9 @@ function start() {
             name: 'action',
             type: 'list',
             message: 'Main Menu',
-            choices: [
+            choices: [                
+                'View All Departments',
+                'View ALl Roles',
                 'View All Employees',
                 'View All Employees by Department',
                 'View All Employees by Role',
@@ -52,6 +54,14 @@ function start() {
         .then((answer) => {
             //Switch case from user input
             switch (answer.action) {
+                case 'View All Departments':
+                    viewAllDept();
+                    break;
+
+                case 'View ALl Roles':
+                    viewAllRole();
+                    break;
+
                 case 'View All Employees':
                     viewAllEmp();
                     break;
@@ -113,11 +123,46 @@ function start() {
         });
 }
 
+//View ALl Departments
+function viewAllDept() {
+    //Query to view all departments
+    const query = `SELECT * FROM department`;
+
+    // Query from connection
+    connection.query(query, function (err, res) {
+        if (err) return err;
+        console.log('\n');
+
+        // Display query results using console.table
+        console.table(res);
+
+        //Back to main menu
+        start();
+    });
+}
+
+//View ALl Employees
+function viewAllRole() {
+    //Query to view all roles
+    const query = `SELECT * FROM role`;
+
+    // Query from connection
+    connection.query(query, function (err, res) {
+        if (err) return err;
+        console.log('\n');
+
+        // Display query results using console.table
+        console.table(res);
+
+        //Back to main menu
+        start();
+    });
+}
+
 //View ALl Employees
 function viewAllEmp() {
     //Query to view all employees
-    const query = `SELECT e.id, e.first_name, e.last_name, role.title, department.name AS department, role.salary, concat(m.first_name ,  ' ' , m.last_name) AS manager FROM employee e LEFT JOIN employee m ON e.manager_id = m.id INNER JOIN role ON e.role_id = role.id INNER JOIN department ON role.department_id = department.id ORDER BY ID ASC`;
-
+    const query = `SELECT * FROM employee`;
     // Query from connection
     connection.query(query, function (err, res) {
         if (err) return err;
