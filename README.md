@@ -38,7 +38,7 @@ The application gives you the following options:
     1. Run node server.js to start the application
 
     2. Select from the menu to view, add, remove, or update employees, roles, departments, or managers
-<img src='images/menu.png' alt='options menu of the app>
+        <img src='images/menu.png' alt='options menu of the app'>
 
 
 ## Contributors
