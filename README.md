@@ -41,6 +41,10 @@ The application gives you the following options:
 
 <img src='images/menu.png' alt='options menu of the app'>
 
+    3. Follow prompt if presented after making a selection from the menu
+
+<img src='images/employee.png' alt='employee list'>
+
 
 ## Contributors
 If you would like to contribute to this project please reach out to me on Github or email
