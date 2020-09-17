@@ -27,7 +27,7 @@ connection.connect((err) => {
     start();
 });
 
-function start() {
+start = () => {
     inquirer
         .prompt({
             name: 'action',
