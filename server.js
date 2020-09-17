@@ -176,7 +176,7 @@ viewAllEmp = () => {
     });
 }
 //View ALl Employees by Department
-function viewAllEmpByDept() {
+viewAllEmpByDept = () => {
     // Set global array to store department names
     let deptArr = [];
 
