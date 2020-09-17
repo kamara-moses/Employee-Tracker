@@ -160,7 +160,7 @@ viewAllRole = () => {
 }
 
 //View ALl Employees
-function viewAllEmp() {
+viewAllEmp = () => {
     //Query to view all employees
     const query = `SELECT * FROM employee`;
     // Query from connection
