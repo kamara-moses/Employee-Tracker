@@ -959,9 +959,9 @@ viewDeptBudgets = () => {
             start();
         });
 }
-function exit() {
+exit = () => {
     // Close your database connection when Node exits
-    process.on('exit', function (code) {
+    process.on('exit', (code) => {
         db.close();
         return console.log(`About to exit with code ${code}`);
     });
