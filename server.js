@@ -142,7 +142,7 @@ viewAllDept = () => {
 }
 
 //View ALl Employees
-function viewAllRole() {
+viewAllRole = () => {
     //Query to view all roles
     const query = `SELECT * FROM role`;
 
