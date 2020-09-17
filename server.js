@@ -531,7 +531,7 @@ addEmp = () => {
 
 
 // Update Employee Role
-function updateEmpRole() {
+updateEmpRole = () => {
 
     // create employee and role array
     let employeeArr = [];
