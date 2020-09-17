@@ -610,7 +610,7 @@ updateEmpRole = () => {
 }
 
 // Update employee manager
-function updateEmpMgr() {
+updateEmpMgr = () => {
 
     // set global array for employees
     let employeeArr = [];
