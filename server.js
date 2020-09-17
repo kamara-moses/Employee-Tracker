@@ -915,7 +915,7 @@ deleteEmp = () => {
 }
 
 // View Department Budget
-function viewDeptBudgets() {
+viewDeptBudgets = () => {
 
     // Create connection using promise-sql
     promisemysql.createConnection(connectionProperties)
