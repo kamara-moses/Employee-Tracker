@@ -349,7 +349,7 @@ addDept = () => {
 }
 
 // Add Role
-function addRole() {
+addRole = () => {
 
     // Create array of departments
     let departmentArr = [];
