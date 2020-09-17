@@ -129,7 +129,7 @@ viewAllDept = () => {
     const query = `SELECT * FROM department`;
 
     // Query from connection
-    connection.query(query, function (err, res) {
+    connection.query(query, (err, res) => {
         if (err) return err;
         console.log('\n');
 
@@ -147,7 +147,7 @@ viewAllRole = () => {
     const query = `SELECT * FROM role`;
 
     // Query from connection
-    connection.query(query, function (err, res) {
+    connection.query(query, (err, res) => {
         if (err) return err;
         console.log('\n');
 
@@ -164,7 +164,7 @@ viewAllEmp = () => {
     //Query to view all employees
     const query = `SELECT * FROM employee`;
     // Query from connection
-    connection.query(query, function (err, res) {
+    connection.query(query, (err, res) => {
         if (err) return err;
         console.log('\n');
 
@@ -186,7 +186,7 @@ viewAllEmpByDept = () => {
 
         // Query just names of departments
         return conn.query('SELECT name FROM department');
-    }).then(function (value) {
+    }).then((value) => {
 
         // Place all names within deptArr
         deptQuery = value;
@@ -231,7 +231,7 @@ viewAllEmpByRole = () => {
 
             // Query all roles
             return conn.query('SELECT title FROM role');
-        }).then(function (roles) {
+        }).then((roles) => {
 
             // Place all roles within the roleArray
             for (i = 0; i < roles.length; i++) {
@@ -263,7 +263,7 @@ viewAllEmpByRole = () => {
 }
 
 // View all employees by manager
-function viewAllEmpByMgr() {
+viewAllEmpByMgr = () => {
 
     // set manager array
     let managerArr = [];
@@ -275,7 +275,7 @@ function viewAllEmpByMgr() {
             // Query all employees
             return conn.query('SELECT DISTINCT m.id, CONCAT(m.first_name, " ", m.last_name) AS manager FROM employee e Inner JOIN employee m ON e.manager_id = m.id');
 
-        }).then(function (managers) {
+        }).then((managers) => {
 
             // place all employees in array
             for (i = 0; i < managers.length; i++) {
