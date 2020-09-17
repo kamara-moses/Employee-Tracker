@@ -221,7 +221,7 @@ viewAllEmpByDept = () => {
 }
 
 // View All Employees by Role
-function viewAllEmpByRole() {
+viewAllEmpByRole = () => {
     // set global array to store all roles
     let roleArr = [];
 
