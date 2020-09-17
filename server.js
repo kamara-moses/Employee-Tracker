@@ -847,7 +847,7 @@ deleteRole = () => {
 }
 
 // Delete employee
-function deleteEmp() {
+deleteEmp = () => {
 
     // Create global employee array
     let employeeArr = [];
