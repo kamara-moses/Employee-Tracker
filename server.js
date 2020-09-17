@@ -124,7 +124,7 @@ start = () => {
 }
 
 //View ALl Departments
-function viewAllDept() {
+viewAllDept = () => {
     //Query to view all departments
     const query = `SELECT * FROM department`;
 
