@@ -678,7 +678,7 @@ updateEmpMgr = () => {
 }
 
 // Delete Department
-function deleteDept() {
+deleteDept = () => {
 
     // department array
     let deptArr = [];
