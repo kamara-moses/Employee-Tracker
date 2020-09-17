@@ -764,7 +764,7 @@ deleteDept = () => {
 }
 
 // Delete Role
-function deleteRole() {
+deleteRole = () => {
 
     // Create role array
     let roleArr = [];
