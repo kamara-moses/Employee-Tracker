@@ -328,7 +328,7 @@ viewAllEmpByMgr = () => {
 
 
 // Add Department
-function addDept() {
+addDept = () => {
 
     inquirer.prompt({
 
