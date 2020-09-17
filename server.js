@@ -417,7 +417,7 @@ addRole = () => {
 }
 
 // Add employee
-function addEmp() {
+addEmp = () => {
 
     // Create two global array to hold 
     let roleArr = [];
@@ -457,7 +457,7 @@ function addEmp() {
                 type: 'input',
                 message: 'First name: ',
                 // Validate field is not blank
-                validate: function (input) {
+                validate: (input) => {
                     if (input === '') {
                         console.log('**FIELD REQUIRED**');
                         return false;
@@ -473,7 +473,7 @@ function addEmp() {
                 type: 'input',
                 message: 'Lastname name: ',
                 // Validate field is not blank
-                validate: function (input) {
+                validate: (input) => {
                     if (input === '') {
                         console.log('**FIELD REQUIRED**');
                         return false;
